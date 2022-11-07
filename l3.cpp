@@ -77,7 +77,7 @@ double calculate_gram_schmidt_coefficient(const std::vector<T1>& vector, const s
 }
 
 template<typename T>
-std::pair<std::vector<std::vector<double>>, std::vector<double>> calculate_gram_schmidt_coefficients_and_normalised_vector_norms(const std::vector<std::vector<T>>& vectors)
+std::tuple<std::vector<std::vector<double>>, std::vector<std::vector<double>>, std::vector<double>> calculate_gram_schmidt_coefficients_and_normalised_vector_norms(const std::vector<std::vector<T>>& vectors)
 {
 	const int m = vectors.size();
 
@@ -104,7 +104,7 @@ std::pair<std::vector<std::vector<double>>, std::vector<double>> calculate_gram_
 	for(int i = 0 ; i < m ; ++i)
 		normalised_vector_norms_squared[i] = calculate_inner_product(normalised_vectors[i], normalised_vectors[i]);
 
-	return std::make_pair(gram_schmidt_coefficients, normalised_vector_norms_squared);
+	return std::make_tuple(gram_schmidt_coefficients, normalised_vectors, normalised_vector_norms_squared);
 }
 
 void size_reduce_basis_k_and_update_gram_schmidt_coefficients(int k, std::vector<std::vector<double>>* reduced_basis, std::vector<std::vector<double>>* gram_schmidt_coefficients)
@@ -140,7 +140,7 @@ std::vector<std::vector<double>> l3_reduction(const std::vector<std::vector<int>
 
 	std::vector<std::vector<double>> gram_schmidt_coefficients;
 	std::vector<double> normalised_vector_norms_squared;
-	std::tie(gram_schmidt_coefficients, normalised_vector_norms_squared) = calculate_gram_schmidt_coefficients_and_normalised_vector_norms(reduced_basis);
+	std::tie(gram_schmidt_coefficients, std::ignore, normalised_vector_norms_squared) = calculate_gram_schmidt_coefficients_and_normalised_vector_norms(reduced_basis);
 
 	// std::cout << gram_schmidt_coefficients << std::endl ;
 	// std::cout << normalised_vector_norms_squared << std::endl;
@@ -154,7 +154,7 @@ std::vector<std::vector<double>> l3_reduction(const std::vector<std::vector<int>
 			std::swap(reduced_basis[k], reduced_basis[k - 1]);
 			k = std::max(k - 1, 1);
 
-			std::tie(gram_schmidt_coefficients, normalised_vector_norms_squared) = calculate_gram_schmidt_coefficients_and_normalised_vector_norms(reduced_basis);
+			std::tie(gram_schmidt_coefficients, std::ignore, normalised_vector_norms_squared) = calculate_gram_schmidt_coefficients_and_normalised_vector_norms(reduced_basis);
 		}
 		else
 			++k;
