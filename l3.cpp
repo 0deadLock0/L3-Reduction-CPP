@@ -271,14 +271,16 @@ bool check_condition2(const std::vector<std::vector<double>>& gram_schmidt_coeff
 
 //det(lattice) <= PI_i_1_to_n || b_i(reduced_basis) || <= det(lattice) * (PI_i_1_to_n (1 + (aplha/4) * ((alpha^(i - 1) - 1 ) / (alpha -1)))) ^ 0.5
 bool check_condition3(const std::vector<std::vector<int>>& lattice, const std::vector<std::vector<double>>& reduced_basis, const double& alpha)
-{
+{//Code needs to be looked for correctness
+
 	const int n = lattice.size();
 	long long int determinant = calculate_determinant<long long int, int>(lattice);
+	long long int abs_determinant = std::abs(determinant);
 	long long int norm_product = 1;
 	for(int i = 0 ; i < n ; ++i)
 		norm_product *= calculate_norm(reduced_basis[i]);
 
-	if( determinant > norm_product )
+	if( abs_determinant > norm_product )
 		return false;
 
 	double product = 1;
@@ -289,10 +291,10 @@ bool check_condition3(const std::vector<std::vector<int>>& lattice, const std::v
 		product *= term;
 	}
 
-	double right_side_term = determinant * std::sqrt(product);
+	double right_side_term = abs_determinant * std::sqrt(product);
 
 	// std::cout << alpha << "\n";
-	// std::cout << determinant << " " << norm_product << " " << right_side_term << "\n";
+	// std::cout << abs_determinant << " " << norm_product << " " << right_side_term << "\n";
 
 	if( norm_product > right_side_term )
 		return false;
@@ -378,9 +380,9 @@ bool are_properties_satisfied(const std::vector<std::vector<int>>& lattice, cons
 	if( !condition2 )
 		return false;
 
-	// bool condition3 = check_condition3(lattice, reduced_basis, alpha);
-	// if( !condition3 )
-	// 	return false;
+	bool condition3 = check_condition3(lattice, reduced_basis, alpha);
+	if( !condition3 )
+		return false;
 
 	bool condition4 = check_condition4(normalised_vectors, reduced_basis, alpha);
 	if( !condition4 )
