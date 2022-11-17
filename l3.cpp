@@ -401,9 +401,20 @@ bool are_properties_satisfied(const std::vector<std::vector<int>>& lattice, cons
 
 int main()
 {
-	std::vector<std::vector<int>> basis = {{201, 37}, {1648, 297}};
-	// std::vector<std::vector<int>> basis = {{1650, 3744}, {164534, 2342}};
-	// std::vector<std::vector<int>> basis = {{1, 1}, {1, 0}};
+	std::vector<std::vector<int>> basis;
+	// basis = {{201, 37}, {1648, 297}};
+	// basis = {{1650, 3744}, {164534, 2342}};
+	// basis = {{1, 1}, {1, 0}};
+
+	// basis = std::vector<std::vector<int>>(10, std::vector<int>(10));
+	// for(int i = 0 ; i < 10 ; ++i)
+	// 	basis[i][i] = 1;
+	// basis[2][2] = 2;
+
+	// basis = {{2, 3, 4, 1}, {1, 1, -1, 1}, {-1, 1, 9, 5}, {12, 7, 3, 5}};
+
+	basis = {{1121, 343, -4354, 9746}, {34342, 98341, -13224, -56942}, {1, 1, 1, 1}, {-53, 43, -932, -1}};
+
 	double delta = 0.99;
 
 	const int m = basis.size();
