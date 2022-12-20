@@ -12,7 +12,7 @@ in Monsoon 2022 Semester
 under the guidance of Professor [Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
 
 > ## Paper Refered:
-- [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://www.researchgate.net/publication/226499611_Lattice_Basis_Reduction_Improved_Practical_Algorithms_and_Solving_Subset_Sum_Problems "Paper Reference")
+- [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://link.springer.com/article/10.1007/BF01581144 "Paper Reference")
 
 > ## Author:
 - [Abhimanyu Gupta](https://github.com/0deadLock0 "GitHub Profile")
