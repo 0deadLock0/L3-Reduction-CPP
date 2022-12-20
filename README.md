@@ -12,6 +12,7 @@ in Monsoon 2022 Semester
 under the guidance of [Dr. Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
 
 > ## Paper Refered:
+- [Factoring polynomials with rational coefficients](https://link.springer.com/article/10.1007/BF01457454 "Paper Reference")
 - [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://link.springer.com/article/10.1007/BF01581144 "Paper Reference")
 
 > ## Author:
