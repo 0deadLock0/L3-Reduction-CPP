@@ -9,7 +9,7 @@
 Part of Independent Project titled "**An Experimental Study of BKZ Algorithm**""
 at [IIIT Delhi](https://www.iiitd.ac.in/)
 in Monsoon 2022 Semester
-under the guidance of Professor [Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
+under the guidance of [Dr. Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
 
 > ## Paper Refered:
 - [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://link.springer.com/article/10.1007/BF01581144 "Paper Reference")
