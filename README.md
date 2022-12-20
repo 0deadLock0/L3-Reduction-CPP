@@ -26,5 +26,5 @@ under the guidance of [Dr. Subhabrata Samajder](https://www.iiitd.ac.in/subhabra
 ## Note:
 > - The l3_r.cpp is not running properly.
 > - The root cause for this is identified to be the imprecisions in convering `double` values to `Rational` values.
-> - The current algorithm (based on idea of Continued Fractions) fails to represent a subset of `double` values using small integer `numerator` and `denomincator`.
+> - The current algorithm (based on idea of Continued Fractions) fails to represent a subset of `double` values using small integer `numerator` and `denominator`.
 > - During computations, these numerator and denominator values grows rapidly leading to `integer overflow`, eventually causing code termination.
