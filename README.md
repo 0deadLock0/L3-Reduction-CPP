@@ -4,6 +4,7 @@
 - [l3.cpp](l3.cpp "Code File") (L3 Reduction for Integral Basis)
 - [l3_r.cpp](l3_r.cpp "Code File") (L3 Reduction for Rational/Decimal Basis)
 - [rational.cpp](rational.cpp "Code File") (Rational numbers implementation)
+- [properties_statisfied.pdf](properties_statisfied.pdf "PDF File") (Properties Satisfied after L3 Reduction)
 
 > ## Instructions to run either of the file:
 ### Compile:
@@ -12,23 +13,24 @@
 ``` fileName ```
 
 > ## User Inputs:
-Modifiy the following variables in int main() to change user input as per need.
+Modifiy the following variables in int main() to provide input as per need.
 
-```
+```c++
 std::vector<std::vector<int>> basis;
-basis = {{201, 37}, {1648, 297}};
+basis = {{201, 37}, {1648, 297}}; //set Column wise //basis[i] should give the i-th column
 
 double delta = 0.99;
 ```
 
 > ## Paper Refered:
-- [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://www.researchgate.net/publication/226499611_Lattice_Basis_Reduction_Improved_Practical_Algorithms_and_Solving_Subset_Sum_Problems "Paper Reference")
+- [Factoring polynomials with rational coefficients](https://link.springer.com/article/10.1007/BF01457454 "Paper Reference")
+- [Lattice Basis Reduction Improved Practical Algorithm and Solving Subset Sum Problem](https://link.springer.com/article/10.1007/BF01581144 "Paper Reference")
 
 > ## Purpose:
 Part of Independent Project titled "**An Experimental Study of BKZ Algorithm**""
 at [IIIT Delhi](https://www.iiitd.ac.in/)
 in Monsoon 2022 Semester
-under the guidance of Professor [Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
+under the guidance of [Dr. Subhabrata Samajder](https://www.iiitd.ac.in/subhabrata "Profile")
 
 > ## Author:
 - [Abhimanyu Gupta](https://github.com/0deadLock0 "GitHub Profile")
