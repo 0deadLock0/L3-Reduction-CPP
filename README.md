@@ -4,7 +4,7 @@
 - [l3.cpp](l3.cpp "Code File") (L3 Reduction for Integral Basis)
 - [l3_r.cpp](l3_r.cpp "Code File") (L3 Reduction for Rational/Decimal Basis)
 - [rational.cpp](rational.cpp "Code File") (Rational numbers implementation)
-- [properties_statisfied.pdf](properties_statisfied.pdf "PDF File") (Properties Satisfied after L3 Reduction)
+- [l3_properties_satisfied.jpg](l3_properties_satisfied.jpg "IMG File") (Properties Satisfied after L3 Reduction)
 
 > ## Instructions to run either of the file:
 ### Compile:
